@@ -1,0 +1,348 @@
+/* ROBOTO----- OSWALD (FONT) */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Roboto:wght@300;400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;  padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container{
+    padding: 1.25rem 2% 1.25rem 17%;
+}
+
+.large-container{
+    padding-left: 7%;
+}
+
+/* ---------------ROOT VARIABLES------------------ */
+:root {
+    /* COLORS */
+
+    --color-white: #fff;
+    --color-light: #f0f0f0;
+    --color-light-variant: #dbdbdb;
+    --color-black: #000;
+    --color-dark: #242424;
+    --color-grey: #979797;
+  
+  
+    /* TRANSITON */
+    --transition: all 350ms ease;
+}
+
+body{
+    position: relative;
+    background: var(--color-light);
+    font-family: 'roboto', sans-serif;
+}
+
+/* ---------------------NAVBAR--------------------- */
+.navbar {
+    position: fixed;
+    top: 0;  left: 0;
+    width: 100%;  height: 3.75rem;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 0 1.5vw;
+}
+
+.toggle-btn {
+    width: 1.25rem;  height: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    position: absolute;
+    width: 100%;  height: 0.125rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-grey);
+}
+.toggle-btn span:nth-child(1){
+    top: 0;
+}
+.toggle-btn span:nth-child(3){
+    top: 100%;
+}
+
+.logo-container {
+    display: flex;
+    height: 1.875rem;
+    margin: -0.125rem 1.875rem 0;
+    text-align: center;
+}
+
+.logo-container .logo-img{
+    height: 1.875rem;
+}
+
+.logo-container .logo-txt{
+    margin: auto 0.3rem;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: -.5px;
+}
+
+.logo-container .logo-txt sup{
+    margin: 0 .3rem;
+    font-weight: lighter;
+    font-family: 'Oswald', sans-serif;
+    font-size: .75rem;
+    opacity: .8;
+}
+
+.search-box {
+    position: relative;
+    max-width: 31.25rem;
+    width: 50%;  height: 2.1875rem;
+    display: flex;
+}
+
+.search-bar {
+    width: 85%;  height: 100%;
+    border: 2px solid var(--color-light-variant);
+    padding: 0 1.25rem;
+    font-size: 1rem;
+    border-radius:  0.1rem 0 0  0.1rem; 
+}
+
+.search-btn {
+    width: 15%;  height: 100%;
+    background-color: var(--color-light);
+    border: 0.125rem solid var(--color-light-variant);
+    padding: 0.313rem 0;
+    border-left: none;   
+    border-radius: 0 0.1rem 0.1rem 0; 
+}
+
+
+.search-btn img {
+    width: 30%; 
+}
+
+.user-options {
+    height: 2.188rem;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.user-options .icon{
+    height: 80%;
+    margin-right: 1.25rem;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.user-options .user-dp {
+    width: 1.875rem;  height: 1.875rem;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.user-options .user-dp img {
+    width: 100%;  height: 100%;
+    object-fit: cover;
+}
+
+/* ------------------------------------------ */
+/* ---------------------SIDEBAR--------------------- */
+.side-bar{
+    position: fixed;
+    top: 3.75rem;  left: 0;
+    min-width: 1.625rem;  width: 15.625rem;
+    height: calc(100vh - 3.75rem);
+    background: var(--color-white);
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 10;
+}
+
+.links {
+    display: block;
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: var(--color-black);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.links img {
+    height: 1.563rem;
+    margin-right: 1.25rem;
+}
+
+.links:hover,
+.links.active {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.saperator {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1.25rem 0;
+}
+
+.subscribed-list h3{
+    font-size: 0.813rem;
+    margin: 1.25rem 0 1.25rem 1.5rem;
+    color: var(--color-grey);
+
+}
+
+.subscribed-list .links img{
+    border-radius: 50%;
+}
+
+.side-bar.small-side-bar{
+    width: 5%;    
+}
+
+.side-bar.small-side-bar .links p{
+    display: none;
+}
+
+.side-bar.small-side-bar h3{
+    display: none;
+}
+
+/* ------------------------------------------ */
+/* ---------------------FILTERS--------------------- */
+.filters {
+    position: fixed;
+    left: 0;  top: 3.75rem;
+    width: 100%;
+    height: 3.75rem;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-light-variant);
+    border-bottom: 1px solid var(--color-light-variant);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    z-index: 1;
+}
+
+.filters.small-side-bar {
+    padding-left: 5rem;
+}
+
+.filter-options {
+    flex: 0 0 auto;
+    padding: 0.625rem 1.25rem;
+    border-radius: 3.125rem;
+    background: var(--color-light);
+    border: 1px solid var(--color-light-variant);
+    text-transform: capitalize;
+    margin-right: 0.625rem;
+    color: #242424;
+    font-size: 0.938rem;
+    cursor: pointer;
+}
+
+.filter-options.active {
+    color: var(--color-white);
+    background-color: var(--color-dark);
+}
+
+/* ------------------------------------------ */
+/* ---------------------VIDEOS--------------------- */
+/* .video-container { */
+    /* width: calc(100% - 15.625rem); */
+    /* margin-top: 7.5rem; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 25%); */
+    /* gap: 1.25rem 0.313rem; */
+    /* overflow-x: hidden; */
+/* } */
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 7.5rem;
+}
+
+.video {
+    min-height: 15.625rem;
+    height: auto;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 9.375rem;
+    object-fit: cover;
+}
+
+.video .content {
+    width: 100%;
+    height: 6.25rem;
+    padding: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .channel-icon {
+    width: 2.5rem;  height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.625rem;
+}
+
+.content .info .title {
+    width: 100%;  height: 2.5rem;
+    overflow: hidden;
+}
+
+.channel-name,
+.additional-info {
+    font-size: .816;
+    margin: 2px 0;
+    color: var(--color-grey);
+}
+
+
+@media (max-width: 900px ){
+    .toggle-btn,
+    .side-bar{
+        display: none;
+    }
+    .filters.small-side-bar {
+        left: 0;
+        padding-left: 2rem;
+    }
+
+    .logo-container {
+        margin-left: 0;
+    }
+
+    .container,
+    .large-container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
